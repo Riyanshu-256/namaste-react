@@ -6,8 +6,10 @@
     </div>
 </div>
 */
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("div", {id: "parent"}, React.createElement("div", {id: "class"}, React.createElement("h1", {}, "Heyyyyy Riyanshu Sharma! 😁")));  // {} => This is the palace where you will give attribute to the tag (id, class)
+const heading = React.createElement("div", {id: "parent"}, React.createElement("div", {id: "child"}, React.createElement("h1", {}, "Heyyyyy Riyanshu Sharma! 😁")));  // {} => This is the palace where you will give attribute to the tag (id, class)
 console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
