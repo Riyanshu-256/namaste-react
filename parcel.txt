@@ -1,3 +1,5 @@
+//----------------------------------------------- FEATURES OF PARCEL --------------------------------------------------------//
+
 1. Dev Build => Parcel creates fast builds while you are developing your project so you can test things quickly.
 
 2. Local Server => Parcel automatically starts a small local server (like http://localhost:1234) to run your project.
