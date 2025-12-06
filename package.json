@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Riyanshu-256/namaste-react/issues"
   },
-  "homepage": "https://github.com/Riyanshu-256/namaste-react#readme"
+  "homepage": "https://github.com/Riyanshu-256/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
 }
