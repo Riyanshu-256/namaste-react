@@ -1,0 +1,39 @@
+//----------------------------------------------- FEATURES OF PARCEL --------------------------------------------------------//
+
+1. Dev Build => Parcel creates fast builds while you are developing your project so you can test things quickly.
+
+2. Local Server => Parcel automatically starts a small local server (like http://localhost:1234) to run your project.
+
+3. HMR – Hot Module Replacement => Whenever you change your code, the browser updates automatically.Sometimes it even updates without refreshing the whole page.
+This makes development super fast.
+
+4. File Watching Algorithm (written in C++) => Parcel uses a very fast file-watching system (built in C++).If you change a file → it instantly detects it → and rebuilds.
+
+5. Caching – Faster Buildsn => Parcel stores previous build results in a cache.
+Next time the build becomes much faster.
+
+6. Image Optimization => Parcel automatically compresses and optimizes images without reducing quality.
+
+7. Minification => It makes your code smaller by removing unnecessary spaces, comments, etc.
+This helps your website load faster.
+
+8. Bundling => Parcel combines all your JavaScript, CSS, etc. into bundles.
+
+9. Compression => It compresses your bundles even more (like gzip/brotli) for faster loading.
+
+10. Consistent Hashing => Parcel generates unique hashes for files so the browser knows when a file is updated.Helps with caching.
+
+11. Code Splitting => It splits your code into smaller chunks.
+Only the needed chunk loads first → faster page load.
+
+12. Differential Bundling => Parcel creates different bundles for older and newer browsers so your app works everywhere.
+
+13. Diagnostics => Parcel gives clean, easy-to-understand error messages.
+
+14. Error Handling => It handles errors well and shows helpful messages.
+
+15. HTTPS => You can even run your local server in HTTPS mode.
+
+16. Tree Shaking => Parcel removes unused code automatically to make your bundle smaller.
+
+17. Separate Dev & Prod Bundles => Parcel creates a different build for development and production (optimized and minified).
