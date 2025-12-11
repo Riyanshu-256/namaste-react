@@ -1,4 +1,4 @@
-3616
+3619
 105C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\lmdb\dependencies\lz4\lib\lz4hc.h134094536630731852 0
 91C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\react-dom\client.js134094558380831786 0
 89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@msgpackr-extract134094558487254299 1
@@ -7,28 +7,23 @@
 94C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\picomatch\package.json134094536614608925 0
 119C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\transformer-node\lib\NodeTransformer.js134094536649385915 0
 89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\lmdb\dependencies134094539292905464 1
-71C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\package.json134094558487370631 0
+71C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\package.json134095475503880971 0
 128C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\react-dom\cjs\react-dom-server-legacy.node.production.js134094558464120241 0
 92C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\type-fest\index.d.ts134094536615154013 0
-107C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_object_spread.mjs134094536647046618 0
-89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\has-flag\index.js134094536613989908 0
-115C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\accelerometer.js134094536618341173 0
-113C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\_\_object_without_properties134094539317176249 1
-89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\scheduler\LICENSE134094558380633917 0
-126C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\css-file-selector-button.js134094536629176779 0
-148C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.win32-x64-msvc.node134094536650228832 0
-124C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\page-transition-events.js134094536652054579 0
-103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\reporter-dev-server\src134094539275971298 1
-80C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\msgpackr134094539219653875 1
-88C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\is-glob\index.js134094536613886957 0
-69C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\.gitignore134094585692343611 0
-95C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\_\_type_of134094539322763378 1
+81C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\commander134094539214782167 1
+66C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\.vscode134095493743519653 1
+110C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\types-internal\lib\unsafe.d.ts134094536632715434 0
+84C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers134094539245426477 1
+95C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\runtime-rsc\src134094539278792502 1
+101C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\utils\src\Deferred.js134094536664312234 0
+96C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\semver\ranges\outside.js134094536615486670 0
+147C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc\lib\filesystem.js134094536666635442 0
 114C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_wrap_async_generator.mjs134094536648072306 0
 67C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\react.js134094565954995267 0
-63C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist134094582731927553 1
+63C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist134095475235798201 1
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\cjs\_using_ctx.cjs134094536626781244 0
 113C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\react\cjs\react-jsx-runtime.production.js134094558381635900 0
-69C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\index.html134094562699861250 0
+69C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\index.html134095474585420328 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\_\_new_arrow_check134094539316451380 1
 108C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\dnssec.js134094536636148360 0
 115C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\pad-start-end.js134094536652029268 0
@@ -38,7 +33,7 @@
 121C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\runtime-js\lib\helpers\node\css-loader.js134094536656861035 0
 100C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\semver\classes\comparator.js134094536614429262 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\regions\PT.js134094536653035619 0
-69C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\parcel.txt134094581851577174 0
+69C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\parcel.txt134094595988954627 0
 112C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\word-break.js134094536661819544 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\core\lib\Environment.js134094536674093470 0
 90C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\dotenv\lib\main.js134094536629295781 0
@@ -172,7 +167,6 @@
 114C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\react\cjs\react-jsx-runtime.development.js134094558381595898 0
 106C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\wasm.js134094536660692390 0
 82C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\color-name134094539214557409 1
-81C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\commander134094539214782167 1
 81C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\react-dom134094559041842005 1
 116C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\css-gencontent.js134094536630120557 0
 81C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\is-number134094539217922164 1
@@ -243,6 +237,16 @@
 82C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\micromatch134094539219413777 1
 117C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\scheduler\cjs\scheduler.native.development.js134094558381209246 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\regions\KM.js134094536647526151 0
+107C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_object_spread.mjs134094536647046618 0
+89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\has-flag\index.js134094536613989908 0
+115C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\accelerometer.js134094536618341173 0
+113C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\_\_object_without_properties134094539317176249 1
+89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\scheduler\LICENSE134094558380633917 0
+126C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\css-file-selector-button.js134094536629176779 0
+148C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.win32-x64-msvc.node134094536650228832 0
+124C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\page-transition-events.js134094536652054579 0
+103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\reporter-dev-server\src134094539275971298 1
+80C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\msgpackr134094539219653875 1
 135C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\sample-bdb.txt134094536633399455 0
 107C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\lmdb\dependencies\lz4\lib\README.md134094536632892349 0
 137C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc\LICENSE134094536666280438 0
@@ -671,6 +675,7 @@
 94C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\ordered-binary\LICENSE134094536613746597 0
 102C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\postcss-value-parser\README.md134094536614576075 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\regions\RU.js134094536654550063 0
+76C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\react.js.map134095459897567508 0
 106C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\msgpackr\dist\index-no-eval.min.js134094536628510636 0
 124C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\_\_class_private_field_set\package.json134094536635974700 0
 82C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\parcel\lib134094539253353257 1
@@ -772,12 +777,6 @@
 116C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\form-attribute.js134094536642080809 0
 113C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\css-hyphens.js134094536630476996 0
 122C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\react-dom\cjs\react-dom-server.node.development.js134094558485716380 0
-110C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\types-internal\lib\unsafe.d.ts134094536632715434 0
-84C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers134094539245426477 1
-95C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\runtime-rsc\src134094539278792502 1
-101C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\utils\src\Deferred.js134094536664312234 0
-96C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\semver\ranges\outside.js134094536615486670 0
-147C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc\lib\filesystem.js134094536666635442 0
 102C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\watcher\src\DirTree.hh134094536625223915 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\regions\CV.js134094536635461424 0
 94C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\react-refresh\babel.js134094536616292125 0
@@ -1574,6 +1573,8 @@
 96C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\json5\dist\index.min.mjs134094536615120459 0
 105C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\_\_non_iterable_rest134094539316580554 1
 94C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\is-number\package.json134094536613667625 0
+88C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\is-glob\index.js134094536613886957 0
+95C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\_\_type_of134094539322763378 1
 112C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\esm\_array_without_holes.js134094536627502785 0
 92C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\is-glob\package.json134094536614019123 0
 130C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\mdn-css-unicode-bidi-isolate.js134094536648898873 0
@@ -2250,7 +2251,7 @@
 117C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\getrandomvalues.js134094536642766231 0
 109C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\core\src\SymbolPropagation.js134094536676237843 0
 106C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\heif.js134094536643857637 0
-89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.60446030.js134094582731759180 0
+89C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.60446030.js134095475235712058 0
 109C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\history.js134094536644013052 0
 95C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\browserslist\error.d.ts134094536632605866 0
 120C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\caniuse-lite\data\features\html-media-capture.js134094536644189750 0
@@ -2673,7 +2674,7 @@
 108C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\transformer-posthtml\LICENSE134094536641971270 0
 102C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_defaults.mjs134094536646246138 0
 122C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_define_enumerable_properties.mjs134094536646256137 0
-94C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.3a01df49.css.map134094582731914761 0
+94C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.3a01df49.css.map134095475235332795 0
 109C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_define_property.mjs134094536646286585 0
 109C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\utils\test\objectHash.test.js134094536665369176 0
 101C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_dispose.mjs134094536646309121 0
@@ -2728,6 +2729,7 @@
 105C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_ts_metadata.mjs134094536647829303 0
 99C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\package-manager\src134094539270805948 1
 101C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_type_of.mjs134094536647922547 0
+80C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\.vscode\settings.json134094588551179687 0
 118C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\.bin\node-gyp-build-optional-packages-optional134094536747727032 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\core\src\projectPath.js134094536675502606 0
 123C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\src\_unsupported_iterable_to_array.mjs134094536647958159 0
@@ -2888,7 +2890,7 @@
 120C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\cjs\_ts_add_disposable_resource.cjs134094536625958591 0
 115C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\workers\lib\process\ProcessChild.js134094536635471422 0
 105C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\cjs\_ts_decorate.cjs134094536626000032 0
-90C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.3a01df49.css134094582731759180 0
+90C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.3a01df49.css134095475235297229 0
 98C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\utils\package.json134094536666052585 0
 114C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@swc\helpers\cjs\_ts_dispose_resources.cjs134094536626051921 0
 99C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\@parcel\transformer-postcss134094539241592184 1
@@ -3613,5 +3615,6 @@
 99C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\.bin\update-browserslist-db134094536747742902 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\.bin\update-browserslist-db.cmd134094536747742902 0
 103C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\node_modules\.bin\update-browserslist-db.ps1134094536747732168 0
-74C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\index.html134094582731759180 0
-93C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.60446030.js.map134094582731927553 0
+74C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\index.html134095475234715237 0
+93C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\namaste-react.60446030.js.map134095475235785458 0
+72C:\Users\riyan\OneDrive\Desktop\Github Repos\namaste-react\dist\react.js134095459897263017 0
