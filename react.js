@@ -9,6 +9,7 @@
 // import React from "react";
 // import ReactDOM from "react-dom/client";
 
+// Create element
 const parent = React.createElement(
   "div",
   { id: "parent" },
@@ -19,5 +20,9 @@ const parent = React.createElement(
   )
 ); // {} => This is the palace where you will give attribute to the tag (id, class)
 console.log(parent); // give object
+
+// Create a React root connected to the <div id="root"> in HTML
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Display the React component/element called 'parent' inside that root
 root.render(parent);
