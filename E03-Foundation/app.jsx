@@ -27,7 +27,7 @@ const HeadingComponent = () => {
   );
 };
 
-// 2. Class Based Component => Old way of writing code of component
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />);
+
+// 2. Class Based Component => Old way of writing code of component
