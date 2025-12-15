@@ -1,4 +1,8 @@
 // THIS FILE STORE REACT CODE
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 /*
 <div id="parent">
     <div id="child">
@@ -6,8 +10,6 @@
     </div>
 </div>
 */
-// import React from "react";
-// import ReactDOM from "react-dom/client";
 
 // Create element
 const parent = React.createElement(
