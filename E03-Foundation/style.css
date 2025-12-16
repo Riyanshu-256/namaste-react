@@ -22,12 +22,13 @@
 }
 
 .rest-card {
-  height: 340px;
+  height: 390px;
   width: 200px;
   margin: 5px;
   text-align: center;
   background-color: rgb(233, 233, 233);
   justify-content: space-between;
+  gap: 5px;
 }
 
 .rest-card:hover {
