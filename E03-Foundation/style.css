@@ -1,4 +1,51 @@
-#heading {
-    color: hotpink;
-    background-color: rgb(239, 229, 215);
+.header {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  margin: 15px;
+}
+
+.nav-items > ul {
+  font-size: 20px;
+  display: flex;
+  gap: 50px;
+  list-style-type: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.rest-card {
+  height: 340px;
+  width: 200px;
+  margin: 5px;
+  text-align: center;
+  background-color: rgb(233, 233, 233);
+  justify-content: space-between;
+}
+
+.rest-card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.rest-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search {
+  padding: 10px;
+}
+
+.card1-img {
+  height: 150px;
+  width: 180px;
+  margin: 5px;
 }
