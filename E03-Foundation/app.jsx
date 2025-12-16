@@ -3,29 +3,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// JSX(transpiled before it reaches the JS) - PARCEL - Babel
-// JSX => React.createElement => ReactElement-JS Object => HTMLElement(render)
-// const heading = <h1 className="head">Namaste React using JSX</h1>;
+/*
+# HEADER COMPONENT
+   - Logo
+  - Nav Items
 
-// React Component are 2 types
-// 1. React Functional Component => Modern way
+# BODY
+  -Search
+  -RestContainer
+  -Rest Card
 
-const Title = () => {
-  return (
-    <>
-      <h1 className="head">Namaste React using JSX</h1>
-    </>
-  );
-};
-
-const HeadingComponent = () => {
-  return (
-    <>
-      <Title />
-      <h1 className="heading">Namaste React Functional Componennt</h1>
-    </>
-  );
-};
+# FOOTER
+  -Copyright
+  -Links
+  -Address
+  -Contact 
+*/
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />);
