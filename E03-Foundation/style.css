@@ -22,8 +22,8 @@
 }
 
 .rest-card {
-  height: 390px;
-  width: 200px;
+  height: 440px;
+  width: 300px;
   margin: 5px;
   text-align: center;
   background-color: rgb(233, 233, 233);
@@ -46,7 +46,13 @@
 }
 
 .card1-img {
-  height: 150px;
-  width: 180px;
-  margin: 5px;
+  height: 200px;
+  width: 280px;
+  margin: 10px;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
