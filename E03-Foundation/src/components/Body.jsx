@@ -1,5 +1,5 @@
 // BODY COMPONENT
-import React, { useState } from "react";
+import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 

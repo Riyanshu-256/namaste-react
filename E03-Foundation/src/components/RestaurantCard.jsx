@@ -1,5 +1,4 @@
 // Restaurant Card
-import React from "react";
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
