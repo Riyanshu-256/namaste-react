@@ -1,3 +1,5 @@
+// mockData.jsx has fake or sample data that helps us test and design the UI when the real API is not available.
+
 const resList = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",

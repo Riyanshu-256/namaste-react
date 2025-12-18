@@ -1,4 +1,6 @@
-// Restaurant Card
+// RestaurantCard.jsx is a reusable component that displays details of a single restaurant like image, name, rating, and cuisine, and is used multiple times in Body.jsx.
+
+// Restaurant Card Component
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {

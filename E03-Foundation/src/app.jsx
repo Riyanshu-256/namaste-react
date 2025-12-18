@@ -1,4 +1,5 @@
 // THIS FILE STORES REACT CODE
+// app.jsx is the main file of the app. It joins all components together and decides the basic layout of the application.
 
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";

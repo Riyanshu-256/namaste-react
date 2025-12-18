@@ -1,3 +1,5 @@
+// Header.jsx is the top part of the website that contains the logo and navigation items like Home, About, and Cart. It appears on every page.
+
 import { LOGO_URL } from "../utils/constants";
 
 // Header Component

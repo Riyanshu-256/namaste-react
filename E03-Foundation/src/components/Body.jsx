@@ -1,3 +1,5 @@
+// Body.jsx is the main section of the app that shows content such as the search bar, filters, and the list of restaurants.
+
 // BODY COMPONENT
 import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
