@@ -1,10 +1,11 @@
 // Body.jsx is the main section of the app that shows content such as the search bar, filters, and the list of restaurants.
 
 // BODY COMPONENT
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 
+// BODY COMPONENT => This component is responsible for rendering the UI
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(resList);
 
@@ -32,5 +33,10 @@ const Body = () => {
     </div>
   );
 };
+
+// useEffect Hook -> It is a function which contain 2 argument => 1. callback(arrow function) function   2. dependency array []
+useEffect(() => {
+  console.log("useEffect called");
+}, []);
 
 export default Body;
