@@ -113,3 +113,53 @@
   margin: 19px;
   padding: 14px 40px;
 }
+
+/* .shimmer-cotainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  height: 400px;
+  width: 200px;
+  margin: 30px;
+  background-color: #f0f0f0;
+} */
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 30px 40px;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.shimmer-card {
+  width: 280px;
+  height: 360px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shimmer-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 37%, #e0e0e0 63%);
+  animation: shimmer 2.4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
