@@ -4,4 +4,4 @@ export const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const LOGO_URL =
-  "https://img.pikbest.com/png-images/20241111/-22creative-food-logo-collection-for-culinary-brands-22_11079861.png!sw800";
+  "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-logo-design-%281%29-template-b9bd726f6bee3380567f1c9b63a8c99b_screen.jpg?ts=1658842438";

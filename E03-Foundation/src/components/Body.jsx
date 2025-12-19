@@ -6,33 +6,38 @@
 
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockData";
 
 const Body = () => {
   // State to store restaurant list
-  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
   // useEffect runs once after component mounts
   useEffect(() => {
     // API call is commented because Swiggy blocks browser requests (CORS)
-    // fetchData();
+    fetchData();
   }, []);
 
   // Function to fetch data (correct but not used now)
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/city/ranchi/new-frontier-bakery-ran-matwari-rest180485"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.653564&lng=88.4450847&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await response.json();
+      const restaurantsData =
+        json?.data?.cards?.find((item) =>
+          item?.card?.card?.id?.includes("restaurant_grid_listing_v2")
+        )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
       console.log(json);
+      console.log(restaurantsData);
+
+      // Update the new data in setListOfRestaurants();
+      setListOfRestaurants(restaurantsData);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-
-    // Update the new data in setListOfRestaurants();
-    setListOfRestaurants(json.info?.cards[2].info?.info?.cards);
   };
+  console.log(setListOfRestaurants);
 
   return (
     <div className="body">

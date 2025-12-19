@@ -50,6 +50,7 @@
   gap: 25px;
   padding: 30px 40px;
   background-color: #f8f8f8;
+  justify-content: center;
 }
 
 .rest-card {
