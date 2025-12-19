@@ -6,6 +6,7 @@
 
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // State to store restaurant list
@@ -39,7 +40,7 @@ const Body = () => {
   };
 
   if (listOfRestaurants.length === 0) {
-    return <h1>Loading....</h1>;
+    return <Shimmer />;
   }
 
   return (
