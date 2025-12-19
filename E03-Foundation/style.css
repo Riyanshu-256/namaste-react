@@ -168,3 +168,7 @@
   padding: 0 18 px;
   cursor: pointer;
 }
+
+.filter {
+  display: flex;
+}

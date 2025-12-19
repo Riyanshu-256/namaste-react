@@ -12,6 +12,8 @@ const Body = () => {
   // State to store restaurant list
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
+  const [searchText, setSearchText] = useState([]);
+
   // useEffect runs once after component mounts
   useEffect(() => {
     // API call is commented because Swiggy blocks browser requests (CORS)
@@ -34,6 +36,7 @@ const Body = () => {
 
       // Update the new data in setListOfRestaurants();
       setListOfRestaurants(restaurantsData);
+      setFilteredRestaurants(restaurantsData);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -47,6 +50,26 @@ const Body = () => {
   return (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              const filtered = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredRestaurants(filtered);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
