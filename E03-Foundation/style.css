@@ -115,6 +115,7 @@
   padding: 14px 40px;
 }
 
+/* SHIMMER PAGE */
 .shimmer-container {
   display: flex;
   flex-wrap: wrap;
@@ -166,4 +167,43 @@
   margin: 19px;
   padding: 14px 40px;
   justify-content: center;
+}
+
+/* ERROR PAGE */
+.error-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.error-page h1 {
+  font-size: 3rem;
+  color: #ff4d4f;
+}
+
+.error-page h2 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.error-page p {
+  margin: 10px 0 20px;
+  color: #666;
+}
+
+.error-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-btn:hover {
+  background-color: #e63946;
 }
