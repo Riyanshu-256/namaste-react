@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "react": "^19.2.3",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+    "react-router-dom": "^6.30.2"
   },
   "browserslist": [
     "last 2 version"
