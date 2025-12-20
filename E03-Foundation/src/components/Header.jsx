@@ -4,28 +4,28 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
 
-//------------------------------------------------------------useEffect Hook dependency concept in React -------------------------------------//
-
-// if no dependency array => useEffect is called on every render.
-// useEffect(() => {
-//   console.log("useEffect Called");
-// });
-
-// if dependency array is empty [] => useEffect is called only once when the page/component opens.
-// useEffect(() => {
-//   console.log("useEffect Called");
-// }, []);
-
-// if dependency array is [btnNameReact] => called everytime when btnNameReact is updated
-useEffect(() => {
-  console.log("useEffect Called");
-}, [btnNameReact]);
-
 //--------------------------------------------------------HEADER COMPONENT----------------------------------------------------//
 
 // Header Component
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
+
+  // useEffect Hook dependency concept in React
+
+  // if no dependency array => useEffect is called on every render.
+  // useEffect(() => {
+  //   console.log("useEffect Called");
+  // });
+
+  // if dependency array is empty [] => useEffect is called only once when the page/component opens.
+  // useEffect(() => {
+  //   console.log("useEffect Called");
+  // }, []);
+
+  // if dependency array is [btnNameReact] => called everytime when btnNameReact is updated
+  useEffect(() => {
+    console.log("useEffect Called");
+  }, [btnNameReact]);
 
   return (
     <div className="header">
