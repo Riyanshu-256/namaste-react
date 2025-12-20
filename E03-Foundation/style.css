@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 50px;
+  padding: 8px 50px;
   background-color: #f8f8f8;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -10,7 +10,8 @@
 }
 
 .logo {
-  width: 90px;
+  width: 150px;
+  height: 100px;
   cursor: pointer;
 }
 
@@ -58,7 +59,7 @@
   background-color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   display: flex;
@@ -110,21 +111,9 @@
   margin: 10px;
   cursor: pointer;
   border-radius: 5px;
-  margin: 19px;
+  margin: 10px;
   padding: 14px 40px;
 }
-
-/* .shimmer-cotainer {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.shimmer-card {
-  height: 400px;
-  width: 200px;
-  margin: 30px;
-  background-color: #f0f0f0;
-} */
 
 .shimmer-container {
   display: flex;
@@ -171,4 +160,10 @@
 
 .filter {
   display: flex;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 19px;
+  padding: 14px 40px;
+  justify-content: center;
 }
