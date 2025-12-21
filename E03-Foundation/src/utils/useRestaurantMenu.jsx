@@ -1,39 +1,41 @@
 import { useEffect, useState } from "react";
-import MENU_MAP from "./api";
+import swiggyAPI from "./swiggyAPI.json";
 
 const useRestaurantMenu = (resId) => {
   const [resInfo, setResInfo] = useState(null);
+  const [resMenu, setResMenu] = useState([]);
 
+  // fetchdata
   useEffect(() => {
-    // 🔴 IMPORTANT FIX: resId is string, MENU_MAP keys are numbers
-    const menuData = MENU_MAP[Number(resId)];
-    if (!menuData) return;
+    // console.log(swiggyAPI);
+    const menuData = swiggyAPI?.data?.cards
+      ?.find((obj) => obj?.groupedCard)
+      ?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter((obj) =>
+        obj?.card?.card["@type"]?.includes("ItemCategory")
+      );
 
-    const cards = menuData?.data?.cards;
-
-    // ✅ Restaurant basic info
-    const restaurantInfo = cards?.find(
-      (c) =>
-        c?.card?.card?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.Restaurant"
-    )?.card?.card?.info;
-
-    // ✅ Menu categories (ACTUAL menu)
-    const categories = cards
-      ?.filter(
-        (c) =>
-          c?.card?.card?.["@type"] ===
-          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-      )
-      ?.map((c) => c.card.card);
-
-    setResInfo({
-      ...restaurantInfo,
-      categories,
+    const organanizedmenuData = menuData?.map((item) => {
+      const type = item?.card?.card["@type"];
+      const categoryId = item?.card?.card?.categoryId;
+      const title = item?.card?.card?.title;
+      const itemCards = item?.card?.card?.itemCards || [];
+      return {
+        categoryId,
+        title,
+        type,
+        itemCards,
+      };
     });
+
+    setResInfo(
+      swiggyAPI?.data?.cards?.find((item) =>
+        item?.card?.card["@type"]?.includes("food.v2.Restaurant")
+      )
+    );
+    setResMenu(organanizedmenuData);
   }, [resId]);
 
-  return resInfo;
+  return { resInfo, resMenu };
 };
 
 export default useRestaurantMenu;
