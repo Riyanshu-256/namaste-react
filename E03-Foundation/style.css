@@ -62,7 +62,7 @@
   justify-content: center;
 }
 
-/* SHIMMER PAGE */
+/*======================== SHIMMER PAGE ============================*/
 .shimmer-container {
   display: flex;
   flex-wrap: wrap;
@@ -194,7 +194,7 @@
   padding: 0;
 }
 
-/* MENU CARD (SAME AS REST CARD) */
+/* MENU CARD */
 .menu-card {
   width: 280px;
   background-color: #ffffff;
@@ -274,14 +274,14 @@
   background-color: #e63946;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ========================== RESPONSIVE ========================== */
 @media (max-width: 768px) {
   .menu-card {
     width: 100%;
   }
 }
 
-/* ======================USER CARD================ */
+/* ===========================USER CARD========================== */
 
 .user-card {
   width: 280px;
@@ -336,3 +336,5 @@
   background-color: #fee2e2; /* light red */
   color: #991b1b; /* dark red */
 }
+
+/* =============================================================== */
