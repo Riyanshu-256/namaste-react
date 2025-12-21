@@ -302,3 +302,37 @@
   height: 200;
   width: 280;
 }
+
+/*====================Online status container ===================*/
+.online-status {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Label text */
+.status-label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Common badge styles */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Online state */
+.status-online {
+  background-color: #dcfce7; /* light green */
+  color: #166534; /* dark green */
+}
+
+/* Offline state */
+.status-offline {
+  background-color: #fee2e2; /* light red */
+  color: #991b1b; /* dark red */
+}

@@ -7,6 +7,7 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/api/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -35,6 +36,16 @@ const Body = () => {
       console.error("Error fetching data:", error);
     }
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) {
+    return (
+      <h1>
+        Looks like you're offline!!! Please check your internet connection
+      </h1>
+    );
+  }
 
   if (filteredRestaurants.length === 0) return <Shimmer />;
 
