@@ -1,37 +1,35 @@
 import { useEffect, useState } from "react";
-import { MENU_MAP } from "./api";
+import MENU_MAP from "./api";
 
 const useRestaurantMenu = (resId) => {
   const [resInfo, setResInfo] = useState(null);
 
   useEffect(() => {
-    const menuData = MENU_MAP[resId];
-
-    if (!menuData) {
-      setResInfo(null);
-      return;
-    }
+    // 🔴 IMPORTANT FIX: resId is string, MENU_MAP keys are numbers
+    const menuData = MENU_MAP[Number(resId)];
+    if (!menuData) return;
 
     const cards = menuData?.data?.cards;
 
-    // Restaurant info
+    // ✅ Restaurant basic info
     const restaurantInfo = cards?.find(
       (c) =>
         c?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.Restaurant"
     )?.card?.card?.info;
 
-    // Menu categories
-    const menuCategories =
-      cards?.find(
+    // ✅ Menu categories (ACTUAL menu)
+    const categories = cards
+      ?.filter(
         (c) =>
           c?.card?.card?.["@type"] ===
-          "type.googleapis.com/swiggy.presentation.food.v2.Menu"
-      )?.card?.card?.categories || [];
+          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+      )
+      ?.map((c) => c.card.card);
 
     setResInfo({
       ...restaurantInfo,
-      categories: menuCategories,
+      categories,
     });
   }, [resId]);
 

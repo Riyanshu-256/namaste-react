@@ -32,7 +32,7 @@ const RestaurantMenu = () => {
 
       <h3 className="menuTxt">~~~ Menu ~~~</h3>
 
-      {categories.map((category) => (
+      {categories?.map((category) => (
         <ItemCategory key={category.categoryId} data={category} />
       ))}
     </div>
@@ -85,7 +85,9 @@ const MenuItem = ({ menuInfo }) => {
           <span className="rating">{ratings.aggregatedRating.rating} ⭐</span>
         )}
 
-        <h4>₹{((price ?? defaultPrice) / 100).toFixed(0)}</h4>
+        {(price || defaultPrice) && (
+          <h4>₹{((price ?? defaultPrice) / 100).toFixed(0)}</h4>
+        )}
 
         {description && <p>{description}</p>}
       </div>
