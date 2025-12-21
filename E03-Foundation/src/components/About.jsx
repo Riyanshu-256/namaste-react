@@ -70,17 +70,17 @@ const About = () => {
       {/* STATS */}
       <div className="about-stats">
         <div>
-          <h3>50K+</h3>
+          <h3>20K+</h3>
           <p>Orders Delivered</p>
         </div>
 
         <div>
-          <h3>4.8 ⭐</h3>
+          <h3>4.4 ⭐</h3>
           <p>Average Rating</p>
         </div>
 
         <div>
-          <h3>5+</h3>
+          <h3>3+</h3>
           <p>Years of Service</p>
         </div>
       </div>
