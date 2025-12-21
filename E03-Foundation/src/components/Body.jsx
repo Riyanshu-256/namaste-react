@@ -48,6 +48,7 @@ const Body = () => {
             onChange={(e) => setSearchText(e.target.value)}
           />
           <button
+            className="search-btn"
             onClick={() => {
               const filtered = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -63,7 +64,7 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             const filtered = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
+              (res) => res.info.avgRating > 4.5
             );
             setFilteredRestaurants(filtered);
           }}
