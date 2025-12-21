@@ -1,3 +1,4 @@
+/* ================= HEADER ================= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -6,7 +7,6 @@
   background-color: #f8f8f8;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  border-color: black;
 }
 
 .logo {
@@ -27,80 +27,6 @@
   color: black;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
-}
-
-.nav-items > ul > li::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: rgb(13, 13, 97);
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s ease;
-}
-
-.nav-items > ul > li:hover::after {
-  width: 100%;
-}
-
-.rest-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  padding: 30px 40px;
-  background-color: #f8f8f8;
-  justify-content: center;
-}
-
-.rest-card {
-  width: 280px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  flex-direction: column;
-}
-
-.rest-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.card1-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.rest-card h3 {
-  margin: 10px 0 5px;
-  font-size: 18px;
-  color: #333;
-}
-
-.rest-card h4 {
-  margin: 4px 0;
-  font-size: 14px;
-  color: #686b78;
-  font-weight: 400;
-}
-
-.rating {
-  display: inline-block;
-  background-color: #48c479;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 13px;
-  margin-top: 6px;
 }
 
 .search {
@@ -113,6 +39,16 @@
   border-radius: 5px;
   margin: 10px;
   padding: 14px 40px;
+}
+
+.filter {
+  display: flex;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 19px;
+  padding: 14px 40px;
+  justify-content: center;
 }
 
 /* SHIMMER PAGE */
@@ -154,56 +90,143 @@
   }
 }
 
-.login {
-  padding: 0 18 px;
-  cursor: pointer;
-}
-
-.filter {
+/* ================= RESTAURANT LIST ================= */
+.rest-container {
   display: flex;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 19px;
-  padding: 14px 40px;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 30px 40px;
+  background-color: #f8f8f8;
   justify-content: center;
 }
 
-/* ERROR PAGE */
-.error-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.rest-card {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
   text-align: center;
-  background-color: #f9f9f9;
 }
 
-.error-page h1 {
-  font-size: 3rem;
-  color: #ff4d4f;
+.rest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
-.error-page h2 {
-  margin-top: 10px;
+.card1-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.rating {
+  display: inline-block;
+  background-color: #48c479;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+/* ================= RESTAURANT MENU ================= */
+.menu {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.menu-rest-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.menu-rest-card h1 {
+  margin-bottom: 6px;
   color: #333;
 }
 
-.error-page p {
-  margin: 10px 0 20px;
-  color: #666;
+.menuTxt {
+  background-color: #f9f6f6;
+  padding: 12px 30px;
+  border-radius: 30px;
+  width: fit-content;
+  margin: 40px auto 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0d0c0c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.error-btn {
-  padding: 10px 20px;
-  border: none;
-  background-color: #ff4d4f;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+/* CATEGORY */
+.category {
+  font-size: 22px;
+  text-align: center;
+  margin: 30px 0 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
 }
 
-.error-btn:hover {
-  background-color: #e63946;
+/* MENU GRID */
+.menuItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+/* MENU CARD (SAME AS REST CARD) */
+.menu-card {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-card-body {
+  padding: 14px;
+  text-align: center;
+}
+
+.menu-card-body h3 {
+  font-size: 17px;
+  color: #333;
+}
+
+.menu-card-body h4 {
+  font-size: 14px;
+  color: #686b78;
+}
+
+.menu-card-body p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .menu-card {
+    width: 100%;
+  }
 }
