@@ -25,16 +25,6 @@ class About extends Component {
           location={"Koderma-Class"}
           contact={"*******681"}
         />
-        <UserClass
-          name={"Sourav-Class"}
-          location={"Dhanbad-Class"}
-          contact={"*******581"}
-        />
-        <UserClass
-          name={"Kavita-Class"}
-          location={"Kolkata-Class"}
-          contact={"*******481"}
-        />
       </div>
     );
   }
