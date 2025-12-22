@@ -1,9 +1,3 @@
-// Body.jsx is the main section of the app that shows content such as the search bar, filters, and the list of restaurants.
-
-// BODY COMPONENT
-// Body.jsx is the main section of the app that shows content such as
-// search bar, filters, and the list of restaurants.
-
 import { useState, useEffect } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
@@ -15,7 +9,6 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
-  console.log(listOfRestaurants);
 
   useEffect(() => {
     fetchData();
@@ -42,9 +35,9 @@ const Body = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  if (onlineStatus === false) {
+  if (!onlineStatus) {
     return (
-      <h1>
+      <h1 className="text-center text-xl font-semibold mt-10 text-red-500">
         Looks like you're offline!!! Please check your internet connection
       </h1>
     );
@@ -53,16 +46,26 @@ const Body = () => {
   if (filteredRestaurants.length === 0) return <Shimmer />;
 
   return (
-    <div className="body">
-      <div className="filter">
-        <div className="search">
+    // body
+    <div className="bg-[#f8f8f8] min-h-screen">
+      {/* ================= FILTER SECTION ================= */}
+      {/* filter */}
+      <div className="flex justify-center flex-wrap m-[19px] px-[40px] py-[14px] gap-6">
+        {/* ================= SEARCH ================= */}
+        {/*  search */}
+        <div className="flex items-center">
+          {/* search-box */}
           <input
-            className="search-box"
+            className="px-[40px] py-[14px] rounded-l-[15px] border border-black outline-none"
+            type="text"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
+            placeholder="Search restaurants..."
           />
+
+          {/* search-btn */}
           <button
-            className="search-btn"
+            className="px-[40px] py-[14px] rounded-r-[15px] bg-gray-100 hover:bg-gray-200 transition"
             onClick={() => {
               const filtered = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -74,8 +77,10 @@ const Body = () => {
           </button>
         </div>
 
+        {/* ================= TOP RATED FILTER ================= */}
+        {/*  filter-btn */}
         <button
-          className="filter-btn"
+          className="px-[40px] py-[14px] rounded-[15px] bg-gray-100 hover:bg-gray-200 cursor-pointer transition"
           onClick={() => {
             const filtered = listOfRestaurants.filter(
               (res) => res.info.avgRating > 4.5
@@ -87,7 +92,9 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="rest-container">
+      {/* ================= RESTAURANT LIST ================= */}
+      {/* rest-container */}
+      <div className="flex flex-wrap justify-center gap-[25px] px-[40px] py-[30px] bg-[#f8f8f8]">
         {filteredRestaurants.map((restaurant) =>
           restaurant?.info?.promoted ? (
             <RestaurantCardPromoted

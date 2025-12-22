@@ -4,4 +4,4 @@ export const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const LOGO_URL =
-  "https://logowik.com/content/uploads/images/chef-restaurant5078.logowik.com.webp";
+  "https://graphicdesigneye.com/images/rastaurant-logo-design-service.png";

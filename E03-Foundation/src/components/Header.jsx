@@ -8,36 +8,48 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between bg-pink shadow-lg ">
+    <header className="flex justify-between items-center px-[50px] py-2 bg-[#f8f8f8] shadow-lg rounded-[20px]">
       {/* Logo */}
-      <div className="flex items-center">
+      <div>
         <img
           src={LOGO_URL}
           alt="Food App Logo"
-          className="w-14 h-14 object-contain rounded-full"
+          className="w-[150px] h-[100px] cursor-pointer object-contain"
         />
       </div>
 
       {/* Nav */}
-      <div className="nav-items">
-        <ul className="flex p-4 m-4 text-gray-700 font-medium hover:text-orange-500 cursor-pointer transition">
-          <li className="px-4">Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="px-4">
+      <nav>
+        <ul className="flex items-center gap-[35px] text-[18px] list-none m-0 p-0">
+          {/* Online Status */}
+          <li className="flex items-center gap-2 font-medium">
+            Online Status:
+            <span>{onlineStatus ? "🟢" : "🔴"}</span>
+          </li>
+
+          <li className="text-black font-medium cursor-pointer hover:text-orange-500 transition">
             <Link to="/">Home</Link>
           </li>
-          <li className="px-4">
+
+          <li className="text-black font-medium cursor-pointer hover:text-orange-500 transition">
             <Link to="/about">About</Link>
           </li>
-          <li className="px-4">
+
+          <li className="text-black font-medium cursor-pointer hover:text-orange-500 transition">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="px-4">
+
+          <li className="text-black font-medium cursor-pointer hover:text-orange-500 transition">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="px-4">Cart</li>
 
+          <li className="text-black font-medium cursor-pointer hover:text-orange-500 transition">
+            Cart
+          </li>
+
+          {/* Login Button */}
           <button
-            className="px-4 py-1 border rounded"
+            className="px-6 py-2 border border-gray-400 rounded-[5px] font-medium hover:bg-orange-500 hover:text-white transition"
             onClick={() =>
               setBtnNameReact(btnNameReact === "Login" ? "Logout" : "Login")
             }
@@ -45,8 +57,9 @@ const Header = () => {
             {btnNameReact}
           </button>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
+
 export default Header;
