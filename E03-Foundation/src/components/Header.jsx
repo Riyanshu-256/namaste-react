@@ -8,13 +8,13 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <header className="flex justify-between items-center px-[50px] py-2 bg-[#f8f8f8] shadow-lg rounded-[20px]">
+    <header className="flex justify-between items-center px-[50px] py-2 bg-[#f1f1f1] shadow-transparent rounded-[15px]">
       {/* Logo */}
       <div>
         <img
           src={LOGO_URL}
           alt="Food App Logo"
-          className="w-[150px] h-[100px] cursor-pointer object-contain"
+          className="w-[200px] h-[100px] cursor-pointer object-contain"
         />
       </div>
 

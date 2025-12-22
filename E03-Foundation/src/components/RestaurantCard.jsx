@@ -1,37 +1,92 @@
-// RestaurantCard.jsx is a reusable component that displays details of a single restaurant like image, name, rating, and cuisine, and is used multiple times in Body.jsx.
+// RestaurantCard.jsx
+// Reusable component to display a single restaurant card
 
-// Restaurant Card Component
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
   const info = resData?.info;
 
   return (
-    // rest-card
-    <div className="m-4 p-4 w-[200px]">
-      <img className="card1-img" src={CDN_URL + info?.cloudinaryImageId} />
+    // OLD: rest-card
+    <div
+      className="
+        w-[280px]
+        bg-[#ffffff]
+        hover:bg-[#e3e3e3]
+        rounded-[12px]
+        overflow-hidden
+        shadow-md
+        text-center
+        cursor-pointer
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:shadow-2xl
+        hover:scale-[1.02]
+      "
+    >
+      {/* OLD: card1-img */}
+      <img
+        className="w-full h-[180px] object-cover"
+        alt="restaurant"
+        src={CDN_URL + info?.cloudinaryImageId}
+      />
 
-      <h3>{info?.name}</h3>
-      <h4>{info?.cuisines?.join(", ")}</h4>
-      <h4>{info?.avgRating ?? info?.avgRatingString} ⭐</h4>
-      <h4>{info?.costForTwo}</h4>
-      <h4>{info?.sla?.deliveryTime} minutes</h4>
+      {/* OLD: card body */}
+      <div className="p-4">
+        <h2 className="text-[17px] font-semibold text-gray-800 mb-1">
+          {info?.name}
+        </h2>
+
+        <h4 className="text-[14px] text-gray-600 mb-1">
+          {info?.cuisines?.join(", ")}
+        </h4>
+
+        {/* OLD: rating */}
+        <span className="inline-block text-[13px] text-gray-800 px-2 py-1 rounded-md mb-1 bg-orange-100">
+          {info?.avgRating ?? info?.avgRatingString} ⭐
+        </span>
+
+        <h4 className="text-[14px] text-gray-600">{info?.costForTwo}</h4>
+
+        <h4 className="text-[14px] text-gray-600">
+          {info?.sla?.deliveryTime} minutes
+        </h4>
+      </div>
     </div>
   );
 };
 
-// HIGHER ORDER COMPONENT => Adding prom oted label in RestaurantCard at the top
+export default RestaurantCard;
 
-// input - RestaurantCard ==>> RestaurantCardPromoted
+/* ========================================================= */
+/* HIGHER ORDER COMPONENT – Promoted Label */
+/* OLD: promote */
+
 export const withPromotedLabel = (RestaurantCard) => {
   return (props) => {
     return (
-      <div>
-        <label className="promote">Promoted</label>
+      <div className="relative">
+        <label
+          className="
+            absolute
+            top-2
+            left-2
+            bg-black
+            text-white
+            text-xs
+            font-semibold
+            px-2
+            py-1
+            rounded
+            z-10
+          "
+        >
+          Promoted
+        </label>
+
         <RestaurantCard {...props} />
       </div>
     );
   };
 };
-
-export default RestaurantCard;

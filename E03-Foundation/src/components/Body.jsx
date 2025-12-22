@@ -47,7 +47,7 @@ const Body = () => {
 
   return (
     // body
-    <div className="bg-[#f8f8f8] min-h-screen">
+    <div className="bg-[#ffffff] min-h-screen">
       {/* ================= FILTER SECTION ================= */}
       {/* filter */}
       <div className="flex justify-center flex-wrap m-[19px] px-[40px] py-[14px] gap-6">
@@ -94,7 +94,7 @@ const Body = () => {
 
       {/* ================= RESTAURANT LIST ================= */}
       {/* rest-container */}
-      <div className="flex flex-wrap justify-center gap-[25px] px-[40px] py-[30px] bg-[#f8f8f8]">
+      <div className="flex flex-wrap justify-center gap-[25px] px-[40px] py-[30px] bg-[#f1f1f1]">
         {filteredRestaurants.map((restaurant) =>
           restaurant?.info?.promoted ? (
             <RestaurantCardPromoted
