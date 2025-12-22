@@ -5,87 +5,29 @@ const MenuItem = ({ menuInfo }) => {
   const { name, price, description, imageId, ratings = {} } = menuInfo;
 
   return (
-    // menu-card
-    <li
-      className="
-        w-[280px]                 /* width: 280px */
-        bg-[#ffffff]
-        rounded-[12px]
-        overflow-hidden
-        shadow-md
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:shadow-2xl
-      "
-    >
-      {/* menu-card-img */}
+    <li className="w-[280px] bg-[#ffffff] rounded-[12px] overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
       {imageId && (
         <img
-          className="
-            w-full
-            h-[180px]
-            object-cover
-          "
+          className="w-full h-[180px] object-cover"
           src={IMG_URL + imageId}
           alt={name}
         />
       )}
 
-      {/* menu-card-body */}
-      <div
-        className="
-          p-[14px]
-          text-center
-        "
-      >
-        <h3
-          className="
-            text-[17px]
-            text-[#333]
-            font-semibold
-          "
-        >
-          {name}
-        </h3>
+      <div className="p-[14px] text-center">
+        <h3 className="text-[17px] text-[#333] font-semibold">{name}</h3>
 
-        {/* rating */}
         {ratings?.aggregatedRating?.rating && (
-          <span
-            className="
-              inline-block
-              text-[13px]
-              text-[#131313]
-              px-[8px]
-              py-[4px]
-              rounded-[6px]
-              my-[6px]
-              bg-gray-100
-            "
-          >
+          <span className="inline-block text-[13px] text-[#131313] px-[8px] py-[4px] rounded-[6px] my-[6px] bg-gray-100">
             {ratings.aggregatedRating.rating} ⭐
           </span>
         )}
 
-        <h4
-          className="
-            text-[14px]
-            text-[#686b78]
-            font-medium
-            mt-1
-          "
-        >
+        <h4 className="text-[14px] text-[#686b78] font-medium mt-1">
           ₹{(price / 100)?.toFixed(0)}
         </h4>
 
-        <p
-          className="
-            text-[13px]
-            text-[#777]
-            mt-2
-            line-clamp-2
-          "
-        >
+        <p className="text-[13px] text-[#777] mt-2 line-clamp-2">
           {description}
         </p>
       </div>
