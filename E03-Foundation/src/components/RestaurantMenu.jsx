@@ -2,14 +2,15 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import Shimmer from "./Shimmer";
 import ItemCategory from "./ItemCategory";
+import Cart from "./Cart";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const { resInfo, resMenu } = useRestaurantMenu(resId);
 
-  // ✅ SINGLE OPEN ACCORDION STATE
   const [openIndex, setOpenIndex] = useState(null);
+  const [cartCount, setCartCount] = useState(0);
 
   if (!resInfo) return <Shimmer />;
 
@@ -23,36 +24,41 @@ const RestaurantMenu = () => {
   } = resInfo?.card?.card?.info || {};
 
   return (
-    <div className="max-w-[1300px] mx-auto my-[30px] p-[20px] bg-[#f8f8f8]">
-      {/* RESTAURANT INFO CARD */}
-      <div className="bg-white p-[20px] rounded-xl text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
-        <h1 className="text-2xl font-bold text-[#333] mb-1">{name}</h1>
-        <p className="text-[#555]">{cuisines.join(", ")}</p>
+    <div className="min-h-screen bg-gray-100">
+      <div className="max-w-[900px] mx-auto px-4 py-6 pb-28">
+        {/* Restaurant Info Card */}
+        <div className="bg-white rounded-2xl shadow p-6 mb-6">
+          <h1 className="text-2xl font-bold text-gray-800">{name}</h1>
+          <p className="text-gray-600 mt-1">{cuisines.join(", ")}</p>
 
-        <span className="inline-block mt-2 px-2 py-1 rounded-md text-sm text-[#131313]">
-          {avgRating} ⭐
-        </span>
+          <div className="flex items-center gap-4 mt-3 text-sm">
+            <span className="px-2 py-1 bg-green-100 text-green-700 rounded-md font-semibold">
+              ⭐ {avgRating}
+            </span>
+            <span className="text-gray-700">{costForTwoMessage}</span>
+          </div>
 
-        <p className="mt-1">{costForTwoMessage}</p>
-        <p className="text-sm text-[#666]">
-          {sla?.minDeliveryTime}-{sla?.maxDeliveryTime} mins • {areaName}
-        </p>
+          <p className="text-sm text-gray-500 mt-2">
+            {sla?.minDeliveryTime}-{sla?.maxDeliveryTime} mins • {areaName}
+          </p>
+        </div>
+
+        {/* Menu Accordion */}
+        <div className="bg-white rounded-2xl shadow overflow-hidden">
+          {resMenu?.map((category, index) => (
+            <ItemCategory
+              key={index}
+              data={category}
+              isOpen={openIndex === index}
+              onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+              addToCart={() => setCartCount((prev) => prev + 1)}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* MENU TITLE */}
-      <h3 className="bg-[#f9f6f6] px-[30px] py-[12px] rounded-full w-fit mx-auto my-[40px] text-[20px] font-semibold text-[#0d0c0c] shadow-[0_4px_10px_rgba(0,0,0,0.15)]">
-        ~~~ Menu ~~~
-      </h3>
-
-      {/* MENU CATEGORIES (ACCORDION) */}
-      {resMenu?.map((category, index) => (
-        <ItemCategory
-          key={category.categoryId ?? `cat-${index}`}
-          data={category}
-          isOpen={index === openIndex}
-          onToggle={() => setOpenIndex(index === openIndex ? null : index)}
-        />
-      ))}
+      {/* Sticky Cart */}
+      {cartCount > 0 && <Cart cartCount={cartCount} />}
     </div>
   );
 };

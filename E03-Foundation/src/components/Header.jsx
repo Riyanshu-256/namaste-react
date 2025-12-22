@@ -44,7 +44,7 @@ const Header = () => {
           </li>
 
           <li className="text-black font-medium cursor-pointer hover:text-orange-500 transition">
-            Cart
+            <Link>Cart</Link>
           </li>
 
           {/* Login Button */}

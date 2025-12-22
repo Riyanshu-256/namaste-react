@@ -1,37 +1,52 @@
-const MenuItem = ({ menuInfo }) => {
+const MenuItem = ({ menuInfo, addToCart }) => {
   const IMG_URL =
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_400,h_300,c_fill/";
+    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_200,c_fill/";
 
-  const { name, price, description, imageId, ratings = {} } = menuInfo;
+  const { name, price, description, imageId, itemAttribute } = menuInfo;
+  const isVeg = itemAttribute?.vegClassifier === "VEG";
 
   return (
-    <li className="w-[280px] bg-[#ffffff] rounded-[12px] overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-      {imageId && (
-        <img
-          className="w-full h-[180px] object-cover"
-          src={IMG_URL + imageId}
-          alt={name}
-        />
-      )}
+    <div className="flex justify-between gap-4 py-6 border-b last:border-none">
+      {/* Left */}
+      <div className="flex-1">
+        <div className="flex items-center gap-2">
+          <span
+            className={`w-3 h-3 rounded-full ${
+              isVeg ? "bg-green-600" : "bg-red-600"
+            }`}
+          />
+          <h4 className="font-semibold text-gray-800">{name}</h4>
+        </div>
 
-      <div className="p-[14px] text-center">
-        <h3 className="text-[17px] text-[#333] font-semibold">{name}</h3>
+        <p className="font-medium mt-1 text-gray-700">
+          ₹{(price / 100).toFixed(0)}
+        </p>
 
-        {ratings?.aggregatedRating?.rating && (
-          <span className="inline-block text-[13px] text-[#131313] px-[8px] py-[4px] rounded-[6px] my-[6px] bg-gray-100">
-            {ratings.aggregatedRating.rating} ⭐
-          </span>
+        {description && (
+          <p className="text-sm text-gray-500 mt-2 line-clamp-2">
+            {description}
+          </p>
+        )}
+      </div>
+
+      {/* Right */}
+      <div className="relative min-w-[120px]">
+        {imageId && (
+          <img
+            src={IMG_URL + imageId}
+            alt={name}
+            className="w-[120px] h-[120px] rounded-xl object-cover"
+          />
         )}
 
-        <h4 className="text-[14px] text-[#686b78] font-medium mt-1">
-          ₹{(price / 100)?.toFixed(0)}
-        </h4>
-
-        <p className="text-[13px] text-[#777] mt-2 line-clamp-2">
-          {description}
-        </p>
+        <button
+          onClick={addToCart}
+          className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white text-green-600 font-bold px-6 py-1 rounded-lg shadow"
+        >
+          ADD +
+        </button>
       </div>
-    </li>
+    </div>
   );
 };
 
