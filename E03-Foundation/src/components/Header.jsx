@@ -8,43 +8,38 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} alt="logo" />
+    <div className="flex justify-between bg-pink shadow-lg ">
+      {/* Logo */}
+      <div className="flex items-center">
+        <img
+          src={LOGO_URL}
+          alt="Food App Logo"
+          className="w-14 h-14 object-contain rounded-full"
+        />
       </div>
 
+      {/* Nav */}
       <div className="nav-items">
-        <ul>
-          <li className="online-status">
-            <span className="status-label">Online Status:</span>
-
-            <span
-              className={`status-badge ${
-                onlineStatus ? "status-online" : "status-offline"
-              }`}
-            >
-              {onlineStatus ? "🟢 Online" : "🔴 Offline"}
-            </span>
-          </li>
-          <li>
+        <ul className="flex p-4 m-4 text-gray-700 font-medium hover:text-orange-500 cursor-pointer transition">
+          <li className="px-4">Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="px-4">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4">Cart</li>
 
           <button
+            className="px-4 py-1 border rounded"
             onClick={() =>
-              btnNameReact === "Login"
-                ? setBtnNameReact("Logout")
-                : setBtnNameReact("Login")
+              setBtnNameReact(btnNameReact === "Login" ? "Logout" : "Login")
             }
           >
             {btnNameReact}
@@ -54,5 +49,4 @@ const Header = () => {
     </div>
   );
 };
-
 export default Header;
