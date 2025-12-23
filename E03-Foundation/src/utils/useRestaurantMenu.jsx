@@ -5,34 +5,29 @@ const useRestaurantMenu = (resId) => {
   const [resInfo, setResInfo] = useState(null);
   const [resMenu, setResMenu] = useState([]);
 
-  // fetchdata
   useEffect(() => {
-    // console.log(swiggyAPI);
-    const menuData = swiggyAPI?.data?.cards
-      ?.find((obj) => obj?.groupedCard)
-      ?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter((obj) =>
-        obj?.card?.card["@type"]?.includes("ItemCategory")
-      );
+    if (!resId) return;
 
-    const organanizedmenuData = menuData?.map((item) => {
-      const type = item?.card?.card["@type"];
-      const categoryId = item?.card?.card?.categoryId;
-      const title = item?.card?.card?.title;
-      const itemCards = item?.card?.card?.itemCards || [];
-      return {
-        categoryId,
-        title,
-        type,
-        itemCards,
-      };
-    });
-
-    setResInfo(
-      swiggyAPI?.data?.cards?.find((item) =>
-        item?.card?.card["@type"]?.includes("food.v2.Restaurant")
-      )
+    // 🔹 Restaurant Info
+    const restaurantInfo = swiggyAPI?.data?.cards?.find((item) =>
+      item?.card?.card?.["@type"]?.includes("food.v2.Restaurant")
     );
-    setResMenu(organanizedmenuData);
+
+    // 🔹 Menu Categories
+    const menuCategories =
+      swiggyAPI?.data?.cards
+        ?.find((card) => card?.groupedCard)
+        ?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter((card) =>
+          card?.card?.card?.["@type"]?.includes("ItemCategory")
+        )
+        ?.map((category) => ({
+          categoryId: category?.card?.card?.categoryId,
+          title: category?.card?.card?.title,
+          itemCards: category?.card?.card?.itemCards || [],
+        })) || [];
+
+    setResInfo(restaurantInfo);
+    setResMenu(menuCategories);
   }, [resId]);
 
   return { resInfo, resMenu };

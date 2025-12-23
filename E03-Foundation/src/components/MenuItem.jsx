@@ -6,17 +6,10 @@ const MenuItem = ({ menuInfo, addToCart }) => {
   const isVeg = itemAttribute?.vegClassifier === "VEG";
 
   return (
-    <div className="flex justify-between gap-4 py-6 border-b last:border-none">
-      {/* Left */}
+    <div className="flex justify-between gap-4 py-6 border-y border-gray-200">
+      {/* LEFT */}
       <div className="flex-1">
-        <div className="flex items-center gap-2">
-          <span
-            className={`w-3 h-3 rounded-full ${
-              isVeg ? "bg-green-600" : "bg-red-600"
-            }`}
-          />
-          <h4 className="font-semibold text-gray-800">{name}</h4>
-        </div>
+        <h4 className="font-semibold text-gray-800">{name}</h4>
 
         <p className="font-medium mt-1 text-gray-700">
           ₹{(price / 100).toFixed(0)}
@@ -29,23 +22,25 @@ const MenuItem = ({ menuInfo, addToCart }) => {
         )}
       </div>
 
-      {/* Right */}
-      <div className="relative min-w-[120px]">
-        {imageId && (
+      {/* RIGHT */}
+      {imageId && (
+        <div className="relative w-[130px] h-[130px] rounded-br-full">
+          {/* IMAGE (MORE ROUNDED) */}
           <img
             src={IMG_URL + imageId}
             alt={name}
-            className="w-[120px] h-[120px] rounded-xl object-cover"
+            className="w-full h-full object-cover"
           />
-        )}
 
-        <button
-          onClick={addToCart}
-          className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white text-green-600 font-bold px-6 py-1 rounded-lg shadow"
-        >
-          ADD +
-        </button>
-      </div>
+          {/* ADD BUTTON (ON IMAGE, BOTTOM PART) */}
+          <button
+            onClick={addToCart}
+            className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white text-green-600 font-bold px-6 py-1 shadow-md"
+          >
+            ADD +
+          </button>
+        </div>
+      )}
     </div>
   );
 };
