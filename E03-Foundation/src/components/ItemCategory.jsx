@@ -19,7 +19,7 @@ const ItemCategory = ({ data, isOpen, onToggle, addToCart }) => {
             isOpen ? "rotate-180" : ""
           }`}
         >
-          ⌄
+          ⌵
         </span>
       </div>
 

@@ -24,18 +24,26 @@ const MenuItem = ({ menuInfo, addToCart }) => {
 
       {/* RIGHT */}
       {imageId && (
-        <div className="relative w-[130px] h-[130px] rounded-br-full">
-          {/* IMAGE (MORE ROUNDED) */}
+        <div className="relative w-[130px] h-[130px] overflow-hidden rounded-2xl group shadow-md hover:shadow-xl transition">
+          {/* IMAGE */}
           <img
             src={IMG_URL + imageId}
             alt={name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-2xl transition duration-300 group-hover:scale-110"
           />
 
-          {/* ADD BUTTON (ON IMAGE, BOTTOM PART) */}
+          {/* DARK OVERLAY ON HOVER */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
+
+          {/* ADD BUTTON */}
           <button
             onClick={addToCart}
-            className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white text-green-600 font-bold px-6 py-1 shadow-md"
+            className="
+              absolute bottom-3 left-1/2 -translate-x-1/2
+              bg-white text-green-600 font-bold
+              px-6 py-1 rounded-lg
+              shadow-md hover:shadow-lg
+            "
           >
             ADD +
           </button>

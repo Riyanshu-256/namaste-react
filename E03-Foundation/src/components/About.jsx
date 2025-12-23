@@ -1,3 +1,5 @@
+import UserContext from "../utils/UserContext";
+
 const About = () => {
   return (
     <div className="about-restaurant">
@@ -6,6 +8,15 @@ const About = () => {
         <h1>
           About <span>Chef Master</span>
         </h1>
+        {/* info of loggedInUser */}
+        <div>
+          LoggedIn User
+          <UserContext.Consumer>
+            {({ loggedInUser }) => (
+              <h1 className="text-xl font-bold">{loggedInUser}</h1>
+            )}
+          </UserContext.Consumer>
+        </div>
         <p>Serving delicious food with love ❤️</p>
       </div>
 

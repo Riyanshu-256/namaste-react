@@ -1,9 +1,12 @@
 // RestaurantCard.jsx
 // Reusable component to display a single restaurant card
 
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = ({ resData }) => {
+  const { loggedInUser } = useContext(UserContext);
   const info = resData?.info;
 
   return (
@@ -52,6 +55,7 @@ const RestaurantCard = ({ resData }) => {
         <h4 className="text-[14px] text-gray-600">
           {info?.sla?.deliveryTime} minutes
         </h4>
+        <h4>User: {loggedInUser}</h4>
       </div>
     </div>
   );

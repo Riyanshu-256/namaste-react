@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/api/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -43,18 +44,16 @@ const Body = () => {
     );
   }
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   if (filteredRestaurants.length === 0) return <Shimmer />;
 
   return (
-    // body
     <div className="bg-[#ffffff] min-h-screen">
       {/* ================= FILTER SECTION ================= */}
-      {/* filter */}
       <div className="flex justify-center flex-wrap m-[19px] px-[40px] py-[14px] gap-6">
         {/* ================= SEARCH ================= */}
-        {/*  search */}
         <div className="flex items-center">
-          {/* search-box */}
           <input
             className="px-[40px] py-[14px] rounded-l-[15px] border border-black outline-none"
             type="text"
@@ -63,7 +62,6 @@ const Body = () => {
             placeholder="Search restaurants..."
           />
 
-          {/* search-btn */}
           <button
             className="px-[40px] py-[14px] rounded-r-[15px] bg-gray-100 hover:bg-gray-200 transition"
             onClick={() => {
@@ -77,23 +75,34 @@ const Body = () => {
           </button>
         </div>
 
-        {/* ================= TOP RATED FILTER ================= */}
-        {/*  filter-btn */}
-        <button
-          className="px-[40px] py-[14px] rounded-[15px] bg-gray-100 hover:bg-gray-200 cursor-pointer transition"
-          onClick={() => {
-            const filtered = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.5
-            );
-            setFilteredRestaurants(filtered);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        {/* ================= TOP RATED + USERNAME ================= */}
+        <div className="flex items-center gap-6">
+          {/* Top Rated */}
+          <button
+            className="px-[40px] py-[14px] rounded-[15px] bg-gray-100 hover:bg-gray-200 cursor-pointer transition"
+            onClick={() => {
+              const filtered = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4.5
+              );
+              setFilteredRestaurants(filtered);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+
+          {/* Username */}
+          <div className="flex items-center m-4 p-4">
+            <label>Username:</label>
+            <input
+              className="border border-black px-3 py-2 rounded outline-none"
+              value={loggedInUser}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>
+        </div>
       </div>
 
       {/* ================= RESTAURANT LIST ================= */}
-      {/* rest-container */}
       <div className="flex flex-wrap justify-center gap-[25px] px-[40px] py-[30px] bg-[#f1f1f1]">
         {filteredRestaurants.map((restaurant) =>
           restaurant?.info?.promoted ? (
