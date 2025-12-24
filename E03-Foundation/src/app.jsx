@@ -1,5 +1,6 @@
 // THIS FILE STORES REACT CODE
-// app.jsx is the main file of the app. It joins all components together and decides the basic layout of the application.
+// app.jsx is the main file of the app. It joins all components together
+// and decides the basic layout of the application.
 
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
@@ -12,17 +13,22 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
+import Cart from "./components/Cart";
+
 import UserContext from "./utils/UserContext";
 
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+
+// Lazy loaded component
 const Grocery = lazy(() => import("./components/Grocery"));
 
-// AppLayout Component
+/* ================= APP LAYOUT ================= */
 const AppLayout = () => {
-  const [userName, setUserName] = useState();
+  const [userName, setUserName] = useState("");
 
-  // authentication
+  // Simulating authentication
   useEffect(() => {
-    // Make an API call and send username and password
     const data = {
       name: "Riyanshu Sharma",
     };
@@ -30,24 +36,40 @@ const AppLayout = () => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-      <div className="App">
-        <Header />
-        <Outlet />
-      </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="App">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
+/* ================= ROUTER ================= */
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
-      { path: "/", element: <Body /> },
-      { path: "/about", element: <About /> },
-      { path: "/contact", element: <Contact /> },
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
       {
         path: "/grocery",
         element: (
@@ -64,5 +86,6 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
+/* ================= RENDER ================= */
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
