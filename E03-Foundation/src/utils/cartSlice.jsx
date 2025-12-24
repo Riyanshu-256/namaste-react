@@ -9,7 +9,7 @@ const cartSlice = createSlice({
 
   // Initial state of the cart
   initialState: {
-    items: ["pizza", "burger"], // Array to store cart items
+    items: [], // Array to store cart items
   },
 
   // Reducer functions to update the cart state
