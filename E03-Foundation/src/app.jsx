@@ -1,7 +1,3 @@
-// THIS FILE STORES REACT CODE
-// app.jsx is the main file of the app. It joins all components together
-// and decides the basic layout of the application.
-
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -20,28 +16,21 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 
-// Lazy loaded component
 const Grocery = lazy(() => import("./components/Grocery"));
 
 /* ================= APP LAYOUT ================= */
 const AppLayout = () => {
   const [userName, setUserName] = useState("");
 
-  // Simulating authentication
   useEffect(() => {
-    const data = {
-      name: "Riyanshu Sharma",
-    };
-    setUserName(data.name);
+    setUserName("Riyanshu Sharma");
   }, []);
 
   return (
     <Provider store={appStore}>
       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-        <div className="App">
-          <Header />
-          <Outlet />
-        </div>
+        <Header />
+        <Outlet />
       </UserContext.Provider>
     </Provider>
   );
@@ -54,22 +43,10 @@ const appRouter = createBrowserRouter([
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
-      {
-        path: "/",
-        element: <Body />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/cart",
-        element: <Cart />,
-      },
+      { path: "/", element: <Body /> },
+      { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/cart", element: <Cart /> },
       {
         path: "/grocery",
         element: (
@@ -79,7 +56,7 @@ const appRouter = createBrowserRouter([
         ),
       },
       {
-        path: "/restaurants/:resId",
+        path: "/restaurant/:resId",
         element: <RestaurantMenu />,
       },
     ],

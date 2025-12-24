@@ -9,7 +9,6 @@ const RestaurantMenu = () => {
   const { resInfo, resMenu } = useRestaurantMenu(resId);
 
   const [openIndex, setOpenIndex] = useState(null);
-  const [cartCount, setCartCount] = useState(0);
 
   if (!resInfo) return <Shimmer />;
 
@@ -24,18 +23,16 @@ const RestaurantMenu = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className="max-w-[900px] mx-auto px-4 py-6 pb-28">
-        {/* ================= Restaurant Info Card ================= */}
+      <div className="max-w-[900px] mx-auto px-4 py-6 pb-24">
+        {/* Restaurant Info */}
         <div className="bg-white rounded-2xl shadow-md p-6 mb-6 text-center">
           <h1 className="text-2xl font-bold text-gray-800">{name}</h1>
-
           <p className="text-gray-600 mt-1">{cuisines.join(", ")}</p>
 
-          <div className="flex flex-col items-center gap-3 mt-3 text-sm">
+          <div className="flex flex-col items-center gap-2 mt-3 text-sm">
             <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-semibold">
               ⭐ {avgRating}
             </span>
-
             <span className="text-gray-700">{costForTwoMessage}</span>
           </div>
 
@@ -44,7 +41,7 @@ const RestaurantMenu = () => {
           </p>
         </div>
 
-        {/* ================= Menu Accordion ================= */}
+        {/* Menu Categories */}
         <div className="bg-white rounded-2xl shadow overflow-hidden">
           {resMenu?.map((category, index) => (
             <ItemCategory
@@ -52,14 +49,10 @@ const RestaurantMenu = () => {
               data={category}
               isOpen={openIndex === index}
               onToggle={() => setOpenIndex(openIndex === index ? null : index)}
-              addToCart={() => setCartCount((prev) => prev + 1)}
             />
           ))}
         </div>
       </div>
-
-      {/* ================= Sticky Cart ================= */}
-      {cartCount > 0 && <Cart cartCount={cartCount} />}
     </div>
   );
 };
