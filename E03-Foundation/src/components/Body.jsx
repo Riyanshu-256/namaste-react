@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/api/useOnlineStatus";
-import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -43,8 +42,6 @@ const Body = () => {
       </h1>
     );
   }
-
-  const { loggedInUser, setUserName } = useContext(UserContext);
 
   if (filteredRestaurants.length === 0) return <Shimmer />;
 
@@ -89,16 +86,6 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
-
-          {/* Username */}
-          <div className="flex items-center m-4 p-4">
-            <label>Username:</label>
-            <input
-              className="border border-black px-3 py-2 rounded outline-none"
-              value={loggedInUser}
-              onChange={(e) => setUserName(e.target.value)}
-            />
-          </div>
         </div>
       </div>
 
