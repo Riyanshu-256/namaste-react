@@ -1,6 +1,7 @@
 // RestaurantCard.jsx
 // Reusable component to display a single restaurant card
 
+import React from "react";
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
