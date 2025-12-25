@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Riyanshu-256/namaste-react#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.28.5",
     "@babel/preset-react": "^7.28.5",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "autoprefixer": "^10.4.23",
     "jest": "^30.2.0",
