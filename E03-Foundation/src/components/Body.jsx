@@ -1,7 +1,8 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/api/useOnlineStatus";
+import { useNavigate } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -9,6 +10,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData();
@@ -43,10 +45,11 @@ const Body = () => {
     );
   }
 
-  if (filteredRestaurants.length === 0) return <Shimmer />;
+  //  Show shimmer while loading API data
+  if (listOfRestaurants.length === 0) return <Shimmer />;
 
   return (
-    <div className="bg-[#ffffff] min-h-screen">
+    <div className="bg-white min-h-screen">
       {/* ================= FILTER SECTION ================= */}
       <div className="flex justify-center flex-wrap m-[19px] px-[40px] py-[14px] gap-6">
         {/* ================= SEARCH ================= */}
@@ -72,35 +75,39 @@ const Body = () => {
           </button>
         </div>
 
-        {/* ================= TOP RATED + USERNAME ================= */}
-        <div className="flex items-center gap-6">
-          {/* Top Rated */}
-          <button
-            className="px-[40px] py-[14px] rounded-[15px] bg-gray-100 hover:bg-gray-200 cursor-pointer transition"
-            onClick={() => {
-              const filtered = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4.5
-              );
-              setFilteredRestaurants(filtered);
-            }}
-          >
-            Top Rated Restaurants
-          </button>
-        </div>
+        {/* ================= TOP RATED ================= */}
+        <button
+          className="px-[40px] py-[14px] rounded-[15px] bg-gray-100 hover:bg-gray-200 transition"
+          onClick={() => {
+            const filtered = listOfRestaurants.filter(
+              (res) => res.info.avgRating > 4.5
+            );
+            setFilteredRestaurants(filtered);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
       </div>
 
       {/* ================= RESTAURANT LIST ================= */}
+
       <div className="flex flex-wrap justify-center gap-[25px] px-[40px] py-[30px] bg-[#f1f1f1]">
-        {filteredRestaurants.map((restaurant) =>
-          restaurant?.info?.promoted ? (
-            <RestaurantCardPromoted
-              key={restaurant.info.id}
-              resData={restaurant}
-            />
-          ) : (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-          )
-        )}
+        {filteredRestaurants.map((restaurant) => {
+          const id = restaurant.info.id;
+          const CardComponent = restaurant?.info?.promoted
+            ? RestaurantCardPromoted
+            : RestaurantCard;
+
+          return (
+            <div
+              key={id}
+              onClick={() => navigate(`/restaurants/${id}`)}
+              className="cursor-pointer"
+            >
+              <CardComponent resData={restaurant} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
