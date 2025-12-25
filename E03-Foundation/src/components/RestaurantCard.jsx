@@ -10,6 +10,7 @@ const RestaurantCard = ({ resData }) => {
   return (
     // OLD: rest-card
     <div
+      data-testid="resCard"
       className="
         w-[280px]
         bg-[#ffffff]

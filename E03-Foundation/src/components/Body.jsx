@@ -3,6 +3,7 @@ import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/api/useOnlineStatus";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -57,6 +58,7 @@ const Body = () => {
           <input
             className="px-[40px] py-[14px] rounded-l-[15px] border border-black outline-none"
             type="text"
+            data-testid="searchInput"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
             placeholder="Search restaurants..."
