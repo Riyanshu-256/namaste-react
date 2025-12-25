@@ -19,7 +19,7 @@ const Header = () => {
       <img
         src={LOGO_URL}
         alt="Food App Logo"
-        className="w-[200px] h-[100px] object-contain"
+        className="w-[180px] h-[90px] sm:w-[220px] sm:h-[110px] md:w-[260px] md:h-[130px] object-contain"
       />
 
       <ul className="flex items-center gap-[35px] text-[18px] list-none p-0 m-0">

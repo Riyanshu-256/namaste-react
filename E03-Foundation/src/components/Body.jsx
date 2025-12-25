@@ -82,7 +82,7 @@ const Body = () => {
           className="px-[40px] py-[14px] rounded-[15px] bg-gray-100 hover:bg-gray-200 transition"
           onClick={() => {
             const filtered = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.5
+              (res) => res.info.avgRating > 4.2
             );
             setFilteredRestaurants(filtered);
           }}
