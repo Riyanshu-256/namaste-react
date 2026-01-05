@@ -1,4 +1,4 @@
-## 🚀 Namaste React – Complete Learning Journey.  
+## 🚀 Namaste React – Complete Learning Journey.
 
 This repository documents my **complete React learning journey** inspired by  
 **Namaste React by Akshay Saini**.
